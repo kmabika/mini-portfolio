@@ -27,7 +27,7 @@ const Reason = () => {
     <>
       <S.Reason>
         <S.Header ref={ref} animate={ctrls} variants={fadeUpAnimation}>
-          Why Do I Want To Join SovTech ?
+          Why I Want To Join SovTech.
         </S.Header>
         <S.ContentWrapper>
           <S.Content ref={ref} animate={ctrls} variants={fadeUpAnimation}>

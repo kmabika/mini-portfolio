@@ -19,8 +19,8 @@ export const ImageWrapper = styled.div`
   overflow: hidden;
   @media (hover: none) and (pointer: coarse), (max-width: 500px) {
     width: 100%;
-    width: 50vw;
-    height: 55vw;
+    width: 80vw;
+    height: 70vw;
   }
 `;
 
