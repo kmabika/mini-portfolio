@@ -1,34 +1,14 @@
 /** @format */
 
 import Image from "next/image";
-import { useEffect } from "react";
 import * as S from "./styles.scss";
 import { useParallax } from "react-scroll-parallax";
-import { useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { fadeUpAnimation } from "hooks/animations";
 
 const About = () => {
   const parallax = useParallax({
     translateY: [40, -50],
     speed: 500,
   });
-  const ctrls = useAnimation();
-
-  const { ref, inView } = useInView({
-    threshold: 0.5,
-    triggerOnce: true,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      ctrls.start("visible");
-    }
-    if (!inView) {
-      ctrls.start("hidden");
-    }
-  }, [ctrls, inView]);
-
   return (
     <S.About>
       <S.ImageWrapper ref={parallax.ref}>
@@ -40,7 +20,7 @@ const About = () => {
           priority
         />
       </S.ImageWrapper>
-      <S.TextWrapper ref={ref} animate={ctrls} variants={fadeUpAnimation}>
+      <S.TextWrapper>
         <S.Paragraph>
           My name is Kudzai, I am a very curious and self-driven person with a
           big passion for everything software development. I graduated with my{" "}
@@ -49,7 +29,7 @@ const About = () => {
           from Monash University. {" I'm"} also 2x AWS certified with AWS
           Certified Cloud Practitioner and AWS Certified Developer Associate
           certifications. Read more on my{" "}
-          <a href="https://resume.kudzaim.codes" target="">
+          <a href="https://resume.kudzaim.codes" target="_blank" rel="noreferrer">
             resume
           </a>{" "}
           ↗

@@ -36,12 +36,30 @@ export const Header = styled(motion.h1).attrs(() => ({
   variants,
 }))`
   text-transform: uppercase;
-  font-size: 150px;
-  line-height: 10vw;
+
   height: 10vw;
   overflow: hidden;
-  @media only screen and (max-width: 600px) {
-    font-size: 43px;
-    line-height: 41px;
+  @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    font-size:150px;
+    line-height:10vw;
+}
+   
+
+  @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    font-size: 36px;
+}
+  
+  @media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    font-size:100px;
+    line-height: 84px;
   }
 `;

@@ -1,6 +1,5 @@
 /** @format */
 
-import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const Header = styled.h1`
@@ -24,7 +23,7 @@ export const ImageWrapper = styled.div`
   }
 `;
 
-export const TextWrapper = styled(motion.div)`
+export const TextWrapper = styled.div`
   width: 45%;
   @media (hover: none) and (pointer: coarse), (max-width: 500px) {
     width: 95%;

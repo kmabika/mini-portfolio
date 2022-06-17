@@ -36,6 +36,7 @@ const Reason = () => {
               opportunity to speak with a friend{" "}
               <Link
                 href="https://www.linkedin.com/comm/in/casmir-chuks"
+                target="_blank" rel="noreferrer"
                 passHref={true}
               >
                 Casmir
