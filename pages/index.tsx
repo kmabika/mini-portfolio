@@ -1,10 +1,40 @@
-import type { NextPage } from 'next'
+import { useEffect, useState } from 'react'
+import { AnimatePresence } from 'framer-motion'
+import { useScrollBlock } from 'hooks'
 
+import Banner from 'sections/Banner'
+import Marquee from 'sections/Marque'
+import About from 'sections/About'
+import Intro from 'sections/Intro'
+import PageLayout from 'layouts/PageLayout'
+import Purpose from 'sections/Reason'
+import Loader from 'components/Loader'
 
-const Home: NextPage = () => {
+const HomePage = () => {
+  const [loader, setLoader] = useState(true)
+  const [blockScroll, allowScroll] = useScrollBlock()
+  loader ? blockScroll() : allowScroll();
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false)
+    }, 4000)
+  }, [])
+
   return (
-    <h1>hello world</h1>
-    )
+    <AnimatePresence exitBeforeEnter>
+      {loader ? (
+        <Loader />
+      ) : (
+        <PageLayout>
+          <Banner />
+          <Intro/>
+          <About/>
+          <Marquee />
+          <Purpose />
+        </PageLayout>
+      )}
+    </AnimatePresence>
+  )
 }
 
-export default Home
+export default HomePage

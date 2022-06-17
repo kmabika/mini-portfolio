@@ -21,14 +21,46 @@ const GlobalStyles = createGlobalStyle`
         display: block;
     }
     html{
-        overflow: hidden;
-        min-height: -webkit-fill-available;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        scrollbar-width: thin !important;
+        scrollbar-color: ${theme.colors.black} ${theme.colors.white};
+        &::-webkit-scrollbar {
+          width: 10px;
+          height: 1px;
+          width: thin;
+        }
+        &::-webkit-scrollbar-track {
+          border-radius: 2px;
+          box-shadow: inset 0 0 10px ${theme.colors.background}
+        }
+        &::-webkit-scrollbar-thumb {
+          border-radius: 2px;
+          background-color: ${theme.colors.black};
+        }
     }
     body{
         isolation: isolate;
+        cursor: default;
+        overflow-x: hidden;
+        background: ${theme.colors.background};
         min-height: 100vh;
         min-height: -webkit-fill-available;
         font-family: Grotesk;
+    }
+    a{
+        color: inherit;
+        text-decoration: none;
+        font-weight: 800;
+        text-transform: uppercase;
+        mix-blend-mode: difference;
+        outline: none;
+        &:hover{
+            -webkit-text-fill-color: var(--burlywood);
+            -webkit-text-stroke: calc(var(--VW)*0.14) var(--black);
+            cursor: none;
+        }
     }
 `;
 

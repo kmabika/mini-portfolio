@@ -16,10 +16,8 @@ type ThemeShape = {
 const theme: ThemeShape = {
 
     colors: {
-        text: '#0f0e0e',
-        background: '#212529',
-        grey: '#866c55',
-        black: '#000000',
+        background: 'rgb(246,201,160)',
+        black: 'rgb(0,0,0)',
         white: '#ffffff',
     }
 }
