@@ -1,1 +1,0 @@
-export const APP_VERSIOON: number = 'v1.0.0'

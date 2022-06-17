@@ -3,14 +3,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-  </a>
-
   <h3 align="center">Kudzai Mabika SovTech Mini-Portfolio</h3>
 
   <p align="center">
     <br />
-    <a href="">Live Link</a>
+    <a href="https://sovtech-portfolio-kudzai.vercel.app/">Live Link</a>
   </p>
 </div>
 
@@ -22,8 +19,8 @@
 ### Built With
 * [Next.js](https://nextjs.org/)
 * [React.js](https://reactjs.org/)
-* [Styled-Components](https://vuejs.org/)
-* [Framer-Motion](https://angular.io/)
+* [Styled-Components](https://styled-components.com/)
+* [Framer-Motion](https://www.framer.com/motion/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
