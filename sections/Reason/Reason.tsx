@@ -1,26 +1,28 @@
-import { useEffect } from 'react'
-import * as S from './styles.scss'
-import Link from 'next/link'
-import { useAnimation } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
-import { fadeUpAnimation } from 'hooks/animations'
+/** @format */
+
+import { useEffect } from "react";
+import * as S from "./styles.scss";
+import Link from "next/link";
+import { useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { fadeUpAnimation } from "hooks/animations";
 
 const Reason = () => {
-  const ctrls = useAnimation()
+  const ctrls = useAnimation();
 
   const { ref, inView } = useInView({
     threshold: 0.5,
     triggerOnce: true,
-  })
+  });
 
   useEffect(() => {
     if (inView) {
-      ctrls.start('visible')
+      ctrls.start("visible");
     }
     if (!inView) {
-      ctrls.start('hidden')
+      ctrls.start("hidden");
     }
-  }, [ctrls, inView])
+  }, [ctrls, inView]);
   return (
     <>
       <S.Reason>
@@ -31,13 +33,13 @@ const Reason = () => {
           <S.Content ref={ref} animate={ctrls} variants={fadeUpAnimation}>
             <S.Paragraph>
               To me, SovTech represents innovation at its finest. I had the
-              opportunity to speak with a friend{' '}
+              opportunity to speak with a friend{" "}
               <Link
                 href="https://www.linkedin.com/comm/in/casmir-chuks"
                 passHref={true}
               >
                 Casmir
-              </Link>{' '}
+              </Link>{" "}
               who works in the development team. I asked him what he felt was
               the best part of working at SovTech. The resounding answer was the
               collaborative culture.
@@ -71,7 +73,7 @@ const Reason = () => {
         </S.ContentWrapper>
       </S.Reason>
     </>
-  )
-}
+  );
+};
 
-export default Reason
+export default Reason;

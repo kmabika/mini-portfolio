@@ -1,9 +1,9 @@
+/** @format */
+
 import ErrorPage from "sections/ErrorPage";
 
 const Custom404 = () => {
-    return(
-        <ErrorPage />
-    )
-}
+  return <ErrorPage />;
+};
 
 export default Custom404;

@@ -1,7 +1,9 @@
-import * as S from './styles.scss'
+/** @format */
+
+import * as S from "./styles.scss";
 
 const Marquee = () => {
-  const travelDistance = 87
+  const travelDistance = 87;
 
   return (
     <S.Marquee>
@@ -9,42 +11,42 @@ const Marquee = () => {
         <S.LeftMarqueeText
           initial={{ left: 0 }}
           animate={{ left: `-${travelDistance}%` }}
-          transition={{ ease: 'linear', duration: 12, repeat: Infinity }}
+          transition={{ ease: "linear", duration: 12, repeat: Infinity }}
         >
           Why
         </S.LeftMarqueeText>
         <S.LeftMarqueeText
           initial={{ left: 0 }}
           animate={{ left: `-${travelDistance}%` }}
-          transition={{ ease: 'linear', duration: 12, repeat: Infinity }}
+          transition={{ ease: "linear", duration: 12, repeat: Infinity }}
         >
           Join
         </S.LeftMarqueeText>
         <S.LeftMarqueeText
           initial={{ left: 0 }}
           animate={{ left: `-${travelDistance}%` }}
-          transition={{ ease: 'linear', duration: 12, repeat: Infinity }}
+          transition={{ ease: "linear", duration: 12, repeat: Infinity }}
         >
           SOVTECH
         </S.LeftMarqueeText>
         <S.LeftMarqueeText
           initial={{ left: 0 }}
           animate={{ left: `-${travelDistance}%` }}
-          transition={{ ease: 'linear', duration: 12, repeat: Infinity }}
+          transition={{ ease: "linear", duration: 12, repeat: Infinity }}
         >
           Why
         </S.LeftMarqueeText>
         <S.LeftMarqueeText
           initial={{ left: 0 }}
           animate={{ left: `-${travelDistance}%` }}
-          transition={{ ease: 'linear', duration: 12, repeat: Infinity }}
+          transition={{ ease: "linear", duration: 12, repeat: Infinity }}
         >
           Join
         </S.LeftMarqueeText>
         <S.LeftMarqueeText
           initial={{ left: 0 }}
           animate={{ left: `-${travelDistance}%` }}
-          transition={{ ease: 'linear', duration: 12, repeat: Infinity }}
+          transition={{ ease: "linear", duration: 12, repeat: Infinity }}
         >
           Sovtech
         </S.LeftMarqueeText>
@@ -53,21 +55,21 @@ const Marquee = () => {
         <S.RightMarqueeText
           initial={{ right: `${travelDistance}%` }}
           animate={{ right: 0 }}
-          transition={{ ease: 'linear', duration: 12, repeat: Infinity }}
+          transition={{ ease: "linear", duration: 12, repeat: Infinity }}
         >
           Why
         </S.RightMarqueeText>
         <S.RightMarqueeText
           initial={{ right: `${travelDistance}%` }}
           animate={{ right: 0 }}
-          transition={{ ease: 'linear', duration: 12, repeat: Infinity }}
+          transition={{ ease: "linear", duration: 12, repeat: Infinity }}
         >
           join
         </S.RightMarqueeText>
         <S.RightMarqueeText
           initial={{ right: `${travelDistance}%` }}
           animate={{ right: 0 }}
-          transition={{ ease: 'linear', duration: 12, repeat: Infinity }}
+          transition={{ ease: "linear", duration: 12, repeat: Infinity }}
         >
           sovtech
         </S.RightMarqueeText>
@@ -75,27 +77,27 @@ const Marquee = () => {
         <S.RightMarqueeText
           initial={{ right: `${travelDistance}%` }}
           animate={{ right: 0 }}
-          transition={{ ease: 'linear', duration: 12, repeat: Infinity }}
+          transition={{ ease: "linear", duration: 12, repeat: Infinity }}
         >
           why
         </S.RightMarqueeText>
         <S.RightMarqueeText
           initial={{ right: `${travelDistance}%` }}
           animate={{ right: 0 }}
-          transition={{ ease: 'linear', duration: 12, repeat: Infinity }}
+          transition={{ ease: "linear", duration: 12, repeat: Infinity }}
         >
           join
         </S.RightMarqueeText>
         <S.RightMarqueeText
           initial={{ right: `${travelDistance}%` }}
           animate={{ right: 0 }}
-          transition={{ ease: 'linear', duration: 12, repeat: Infinity }}
+          transition={{ ease: "linear", duration: 12, repeat: Infinity }}
         >
           sovtech
         </S.RightMarqueeText>
       </S.DirectionMarque>
     </S.Marquee>
-  )
-}
+  );
+};
 
-export default Marquee
+export default Marquee;

@@ -1,5 +1,6 @@
-import * as S from './styles.scss'
+/** @format */
 
+import * as S from "./styles.scss";
 
 const ErrorPage = () => {
   return (
@@ -11,7 +12,7 @@ const ErrorPage = () => {
         </S.Wrapper>
       </S.ErrorWrapper>
     </>
-  )
-}
+  );
+};
 
-export default ErrorPage
+export default ErrorPage;

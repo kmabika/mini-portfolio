@@ -1,3 +1,5 @@
-import ErrorPage from './ErrorPage';
+/** @format */
+
+import ErrorPage from "./ErrorPage";
 
 export default ErrorPage;

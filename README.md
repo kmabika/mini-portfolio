@@ -1,6 +1,5 @@
 <div id="top"></div>
 
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <h3 align="center">Kudzai Mabika SovTech Mini-Portfolio</h3>
@@ -13,7 +12,6 @@
 
 <img src="./demo.png">
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 ### Built With

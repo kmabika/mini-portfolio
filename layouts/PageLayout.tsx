@@ -1,6 +1,7 @@
-import * as S from './styles.scss'
-import Footer from 'components/Footer'
+/** @format */
 
+import * as S from "./styles.scss";
+import Footer from "components/Footer";
 
 const PageLayout = ({ children }: PageLayoutTypes) => {
   return (
@@ -8,7 +9,7 @@ const PageLayout = ({ children }: PageLayoutTypes) => {
       <S.Home>{children}</S.Home>
       <Footer />
     </S.PageContainer>
-  )
-}
+  );
+};
 
-export default PageLayout
+export default PageLayout;

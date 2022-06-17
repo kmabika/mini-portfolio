@@ -1,15 +1,16 @@
-import styled from 'styled-components'
-import { motion } from 'framer-motion'
+/** @format */
 
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const variants = {
-    initial: {
-      y: '200%',
-    },
-    animate: {
-      y: '0%',
-    },
-}
+  initial: {
+    y: "200%",
+  },
+  animate: {
+    y: "0%",
+  },
+};
 
 export const Banner = styled.div`
   height: 100vh;
@@ -17,7 +18,7 @@ export const Banner = styled.div`
   flex-wrap: wrap;
   align-content: center;
   margin-bottom: 10vh;
-`
+`;
 
 export const InnerWrap = styled.div`
   overflow: hidden;
@@ -28,11 +29,12 @@ export const InnerWrap = styled.div`
   :nth-child(3) {
     padding-left: 15vw;
   }
-`
+`;
 
 export const Header = styled(motion.h1).attrs(() => ({
-    initial: "initial",
-    variants}))`
+  initial: "initial",
+  variants,
+}))`
   text-transform: uppercase;
   font-size: 150px;
   line-height: 10vw;

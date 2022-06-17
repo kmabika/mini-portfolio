@@ -1,3 +1,5 @@
+/** @format */
+
 export const fadeUpAnimation = {
   hidden: {
     opacity: 0,
@@ -11,4 +13,4 @@ export const fadeUpAnimation = {
       ease: [0.2, 0.65, 0.3, 0.9],
     },
   },
-}
+};

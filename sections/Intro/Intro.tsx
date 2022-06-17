@@ -1,16 +1,18 @@
-import * as S from './styles.scss'
-import { useParallax } from 'react-scroll-parallax'
+/** @format */
+
+import * as S from "./styles.scss";
+import { useParallax } from "react-scroll-parallax";
 
 const Intro = () => {
   const parallax = useParallax({
-    easing: 'easeOutQuad',
-    translateX: [0,20],
-  })
+    easing: "easeOutQuad",
+    translateX: [0, 20],
+  });
   const upEffect = useParallax({
     easing: [1, -0.75, 0.5, 1.34],
     translateY: [50, -100],
     speed: -20,
-  })
+  });
   return (
     <>
       <S.Greeting>
@@ -22,7 +24,7 @@ const Intro = () => {
         </S.Name>
       </S.Greeting>
     </>
-  )
-}
+  );
+};
 
-export default Intro
+export default Intro;

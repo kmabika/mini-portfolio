@@ -1,5 +1,7 @@
-import styled from 'styled-components';
-import Link from 'next/link';
+/** @format */
+
+import styled from "styled-components";
+import Link from "next/link";
 
 export const ErrorWrapper = styled.div`
   position: absolute;
@@ -8,12 +10,11 @@ export const ErrorWrapper = styled.div`
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-`
-
+`;
 
 export const Wrapper = styled.div`
   margin: 10vh 0 20vh 0;
-`
+`;
 
 export const Header = styled.h1`
   font-size: 246px;
@@ -29,7 +30,7 @@ export const Header = styled.h1`
   @media (max-width: 600px) {
     font-size: 66px;
   }
-`
+`;
 
 export const SubHeader = styled(Link)`
   font-size: 46px;
@@ -38,4 +39,4 @@ export const SubHeader = styled(Link)`
   @media (hover: none) and (pointer: coarse), (max-width: 500px) {
     font-size: 25px;
   }
-`
+`;

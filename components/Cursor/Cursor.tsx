@@ -1,25 +1,27 @@
-import React from 'react'
-import { StyledCursor } from './styles.scss'
-import { useCursorContext } from 'context/cursor'
+/** @format */
+
+import React from "react";
+import { StyledCursor } from "./styles.scss";
+import { useCursorContext } from "context/cursor";
 
 const Cursor = () => {
-  const cursorRef = React.useRef<HTMLDivElement>(null)
-  const [{ cursorStyle, position }] = useCursorContext()
+  const cursorRef = React.useRef<HTMLDivElement>(null);
+  const [{ cursorStyle, position }] = useCursorContext();
   React.useEffect(() => {
     const onMouseMove = (event: MouseEvent) => {
-      const x = position ? position?.x : event.clientX
-      const y = position ? position?.y : event.clientY
+      const x = position ? position?.x : event.clientX;
+      const y = position ? position?.y : event.clientY;
       if (null !== cursorRef.current) {
-        cursorRef.current.style.transform = `translate3d(${x}px, ${y}px, 0)`
+        cursorRef.current.style.transform = `translate3d(${x}px, ${y}px, 0)`;
       }
-    }
+    };
 
-    document.addEventListener('mousemove', onMouseMove)
+    document.addEventListener("mousemove", onMouseMove);
 
     return () => {
-      document.removeEventListener('mousemove', onMouseMove)
-    }
-  }, [position])
+      document.removeEventListener("mousemove", onMouseMove);
+    };
+  }, [position]);
 
   return (
     <>
@@ -29,7 +31,7 @@ const Cursor = () => {
         bordered={cursorStyle.bordered}
       />
     </>
-  )
-}
+  );
+};
 
-export default React.memo(Cursor)
+export default React.memo(Cursor);

@@ -1,8 +1,8 @@
-import * as S from './styles.scss';
+/** @format */
 
+import * as S from "./styles.scss";
 
 const Loader = () => {
-
   return (
     <S.Loader exit={{ y: -1000, transition: { duration: 0.6, delay: 0 } }}>
       <S.Wrapper>
@@ -19,7 +19,7 @@ const Loader = () => {
         <div className="text11 text">Kudzai Mabika</div>
       </S.Wrapper>
     </S.Loader>
-  )
-}
+  );
+};
 
-export default Loader
+export default Loader;

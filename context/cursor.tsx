@@ -1,19 +1,23 @@
-/* eslint-disable react/jsx-filename-extension */
-import React from 'react';
-import theme from 'styles/theme';
+/**
+ * /* eslint-disable react/jsx-filename-extension
+ *
+ * @format
+ */
+
+import React from "react";
+import theme from "styles/theme";
 
 const INITIAL_STATE: State = {
   cursorStyle: {
     bordered: false,
-    color: theme.colors.black
+    color: theme.colors.black,
   },
   position: null,
 };
 
-const rootReducer = (state : State, action : Action) :State => {
-  
+const rootReducer = (state: State, action: Action): State => {
   switch (action?.type) {
-    case 'ADD_CURSOR_BORDER': {
+    case "ADD_CURSOR_BORDER": {
       return {
         ...state,
         cursorStyle: {
@@ -22,7 +26,7 @@ const rootReducer = (state : State, action : Action) :State => {
         },
       };
     }
-    case 'REMOVE_CURSOR_BORDER': {
+    case "REMOVE_CURSOR_BORDER": {
       return {
         ...state,
         cursorStyle: {
@@ -31,7 +35,7 @@ const rootReducer = (state : State, action : Action) :State => {
         },
       };
     }
-    case 'RESET_CURSOR_COLOR': {
+    case "RESET_CURSOR_COLOR": {
       return {
         ...state,
         cursorStyle: {
@@ -40,10 +44,10 @@ const rootReducer = (state : State, action : Action) :State => {
         },
       };
     }
-    case 'LOCK_CURSOR_POSITION': {
+    case "LOCK_CURSOR_POSITION": {
       return {
         ...state,
-          position: action.payload,
+        position: action.payload,
       };
     }
     default: {
@@ -52,9 +56,11 @@ const rootReducer = (state : State, action : Action) :State => {
   }
 };
 
-export const CursorContext = React.createContext<{state: State; dispatch: DispatchActionType} | undefined>({state: INITIAL_STATE , dispatch: () => null});
+export const CursorContext = React.createContext<
+  { state: State; dispatch: DispatchActionType } | undefined
+>({ state: INITIAL_STATE, dispatch: () => null });
 
-export const CursorContextProvider = ({ children } : any) => {
+export const CursorContextProvider = ({ children }: any) => {
   const [state, dispatch] = React.useReducer(rootReducer, INITIAL_STATE);
   const store = React.useMemo(() => ({ state, dispatch }), [state]);
   return (
@@ -63,10 +69,10 @@ export const CursorContextProvider = ({ children } : any) => {
 };
 
 export const useCursorContext = () => {
-    const context = React.useContext(CursorContext);
-    if (context === undefined) {
-      throw new Error('useCursorContext must be used within a CursorProvider');
-    }
-    const {state, dispatch} = context;
-    return [state , dispatch] as const;
+  const context = React.useContext(CursorContext);
+  if (context === undefined) {
+    throw new Error("useCursorContext must be used within a CursorProvider");
+  }
+  const { state, dispatch } = context;
+  return [state, dispatch] as const;
 };
